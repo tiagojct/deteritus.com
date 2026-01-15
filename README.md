@@ -261,7 +261,7 @@ The site automatically deploys to GitHub Pages when you push to the `main` branc
    git init
    git add .
    git commit -m "Initial commit"
-   git remote add origin git@github.com:USERNAME/hugo-blog.git
+   git remote add origin git@github.com:tiagojct/deteritus.com.git
    git push -u origin main
    ```
 
@@ -273,7 +273,7 @@ The site automatically deploys to GitHub Pages when you push to the `main` branc
    - In Settings → Pages, add your custom domain
    - Configure DNS with your domain provider:
      - For apex domain (deteritus.com): Add A records pointing to GitHub's IPs
-     - For www subdomain: Add CNAME record pointing to `USERNAME.github.io`
+     - For www subdomain: Add CNAME record pointing to `tiagojct.github.io`
 
 ### Manual Deployment
 
