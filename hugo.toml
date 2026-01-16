@@ -1,5 +1,5 @@
 baseURL = "https://deteritus.com/"
-languageCode = "en"
+languageCode = "pt"
 title = "Deteritus"
 theme = "deteritus"
 
@@ -10,7 +10,7 @@ theme = "deteritus"
   tag = "tags"
 
 [params]
-  description = "A personal blog by Tiago Jacinto"
+  description = "Um blogue pessoal de Tiago Jacinto"
   author = "Tiago Jacinto"
   mastodon = "https://mastodon.social/@tiagojct"
 

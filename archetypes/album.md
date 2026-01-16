@@ -8,7 +8,7 @@ artist: ""
 album: ""
 year:
 rating: ""
-cover_url: "/images/"
+cover_url: "/img/"
 cover_caption: ""
 favorite: false
 ---

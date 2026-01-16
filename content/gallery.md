@@ -1,5 +1,5 @@
 ---
-title: "Gallery"
+title: "Galeria"
 layout: "gallery"
 type: "page"
 ---

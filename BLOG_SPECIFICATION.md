@@ -137,7 +137,7 @@ title: "Photo Caption Title"
 date: 2024-01-15
 tags: ["photos"]
 post_type: "photo"
-photo_url: "/images/my-photo.jpg"
+photo_url: "/img/my-photo.jpg"
 favorite: true  # Optional
 ```
 
@@ -167,7 +167,7 @@ artist: "Artist Name"
 album: "Album Title"
 year: 1997
 rating: "A+"  # Letter grade: A+, A, A-, B+, B, B-, C+, C, C-, D, F
-cover_url: "/images/album-cover.jpg"  # Optional
+cover_url: "/img/album-cover.jpg"  # Optional
 favorite: true  # Optional
 ```
 
@@ -191,7 +191,7 @@ tags: ["film", "reviews"]
 post_type: "movie"
 year: 2019
 rating: "A"
-poster_url: "/images/movie-poster.jpg"  # Optional
+poster_url: "/img/movie-poster.jpg"  # Optional
 favorite: true  # Optional
 ```
 
@@ -215,7 +215,7 @@ post_type: "book"
 author: "Author Name"
 year: 1969
 rating: "A+"
-cover_url: "/images/book-cover.jpg"  # Optional
+cover_url: "/img/book-cover.jpg"  # Optional
 favorite: true  # Optional
 ```
 

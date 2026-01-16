@@ -6,7 +6,7 @@ tags: ["film", "reviews"]
 post_type: "movie"
 year:
 rating: ""
-poster_url: "/images/"
+poster_url: "/img/"
 cover_caption: ""
 favorite: false
 ---

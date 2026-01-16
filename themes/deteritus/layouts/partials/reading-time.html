@@ -3,5 +3,5 @@
 {{- $words := .WordCount -}}
 {{- $minutes := div $words 200 -}}
 {{- if lt $minutes 1 }}{{ $minutes = 1 }}{{ end -}}
-<span class="reading-time">{{ $minutes }} min read</span>
+<span class="reading-time">{{ $minutes }} min de leitura</span>
 {{- end -}}

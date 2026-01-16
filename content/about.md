@@ -1,11 +1,11 @@
 ---
-title: "About"
+title: "Sobre"
 ---
 
-I'm Tiago Jacinto, and this is my personal corner of the internet.
+Sou o Tiago Jacinto, e este é o meu cantinho pessoal na internet.
 
-Here you'll find my thoughts on technology, music, film, books, and whatever else captures my attention. I write about things I find interesting, share quotes that resonate with me, and occasionally link to content worth reading elsewhere.
+Aqui encontras os meus pensamentos sobre tecnologia, música, cinema, livros e tudo o que me captar a atenção. Escrevo sobre coisas que acho interessantes, partilho citações que ressoam comigo e, ocasionalmente, faço ligações para conteúdo que vale a pena ler.
 
-When I'm not writing, I enjoy discovering new music, watching films, and reading widely across genres. This blog serves as a digital garden where I cultivate ideas and share discoveries.
+Quando não estou a escrever, gosto de descobrir música nova, ver filmes e ler de tudo um pouco. Este blogue serve como um jardim digital onde cultivo ideias e partilho descobertas.
 
-Feel free to reach out on [Mastodon](https://mastodon.social/@tiagojct).
+Fica à vontade para me contactar no [Mastodon](https://mastodon.social/@tiagojct).

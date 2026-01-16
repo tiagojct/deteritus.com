@@ -1,29 +1,29 @@
 ---
-title: "Colophon"
+title: "Colofão"
 ---
 
-## About This Site
+## Sobre Este Site
 
-**Deteritus** is built with [Hugo](https://gohugo.io), a fast and flexible static site generator. The site uses a custom theme designed with a focus on typography and readability.
+**Deteritus** é construído com [Hugo](https://gohugo.io), um gerador de sites estáticos rápido e flexível. O site utiliza um tema personalizado com foco na tipografia e legibilidade.
 
-## Typography
+## Tipografia
 
-The primary typeface is Iowan Old Style, a modern serif designed by John Downer. It draws inspiration from classic old-style typefaces while remaining highly legible on screens. Code is set in SF Mono.
+O tipo de letra principal é Iowan Old Style, uma fonte serifada moderna desenhada por John Downer. Inspira-se nos tipos de letra clássicos old-style, mantendo-se altamente legível em ecrãs. O código está em SF Mono.
 
-## Design Principles
+## Princípios de Design
 
-- **Minimalism**: Focus on content, not decoration
-- **Readability**: Generous line height, comfortable measure
-- **Performance**: No JavaScript frameworks, minimal dependencies
-- **Accessibility**: Semantic HTML, sufficient color contrast, respects system preferences
+- **Minimalismo**: Foco no conteúdo, não na decoração
+- **Legibilidade**: Altura de linha generosa, medida confortável
+- **Desempenho**: Sem frameworks JavaScript, dependências mínimas
+- **Acessibilidade**: HTML semântico, contraste de cores suficiente, respeita as preferências do sistema
 
-## Features
+## Funcionalidades
 
-- Dark mode support (follows system preference)
-- Full-text search powered by [Pagefind](https://pagefind.app)
-- RSS feed for easy subscription
-- Multiple post types: articles, quotes, links, photos, and reviews
+- Suporte para modo escuro (segue a preferência do sistema)
+- Pesquisa de texto completo com [Pagefind](https://pagefind.app)
+- Feed RSS para subscrição fácil
+- Múltiplos tipos de publicação: artigos, citações, ligações, fotos e críticas
 
-## Hosting
+## Alojamento
 
-The site is hosted on [your hosting provider]. The source code is managed with Git.
+O site está alojado no GitHub Pages. O código fonte é gerido com Git.

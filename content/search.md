@@ -1,5 +1,5 @@
 ---
-title: "Search"
+title: "Pesquisa"
 layout: "search"
 type: "page"
 ---

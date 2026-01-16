@@ -13,10 +13,10 @@
 {{- if or ($paginator.HasPrev) ($paginator.HasNext) -}}
 <nav class="pagination">
   {{- if $paginator.HasPrev -}}
-  <a href="{{ $paginator.Prev.URL }}">&larr; Newer</a>
+  <a href="{{ $paginator.Prev.URL }}">&larr; Mais recentes</a>
   {{- end -}}
   {{- if $paginator.HasNext -}}
-  <a href="{{ $paginator.Next.URL }}">Older &rarr;</a>
+  <a href="{{ $paginator.Next.URL }}">Mais antigos &rarr;</a>
   {{- end -}}
 </nav>
 {{- end -}}

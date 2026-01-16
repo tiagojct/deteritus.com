@@ -1,250 +1,250 @@
 # Deteritus
 
-A minimalist personal blog built with Hugo. Features multiple post types, reviews with ratings, a favorites system, and clean typography-focused design.
+Um blogue pessoal minimalista construído com Hugo. Inclui múltiplos tipos de publicação, críticas com classificações, sistema de favoritos e design focado em tipografia limpa.
 
-## Quick Start
+## Início Rápido
 
 ```bash
-# Install Hugo (if not installed)
+# Instalar Hugo (se não estiver instalado)
 brew install hugo
 
-# Serve locally with live reload
+# Servir localmente com live reload
 hugo server -D
 
-# Build for production
+# Compilar para produção
 hugo
 ```
 
-The site will be available at `http://localhost:1313/`.
+O site estará disponível em `http://localhost:1313/`.
 
-## Creating Posts
+## Criar Publicações
 
-All posts go in the `content/blog/` directory.
+Todas as publicações vão para o diretório `content/blog/`.
 
-### File Naming Convention
+### Convenção de Nomes de Ficheiros
 
 ```
-YYYY-MM-DD_slug-name.md
+AAAA-MM-DD_nome-slug.md
 ```
 
-Example: `2024-02-25_on-reading.md`
+Exemplo: `2024-02-25_sobre-leitura.md`
 
-### Basic Post Structure
+### Estrutura Básica de Publicação
 
-Every post needs frontmatter at the top:
+Cada publicação precisa de frontmatter no início:
 
 ```yaml
 ---
-slug: "your-slug"        # Required: determines the URL (e.g., /your-slug/)
-title: "Post Title"
+slug: "o-teu-slug"        # Obrigatório: determina o URL (ex: /o-teu-slug/)
+title: "Título da Publicação"
 date: 2024-02-25
 tags: ["tag1", "tag2"]
-favorite: true           # Optional: adds star icon
+favorite: true           # Opcional: adiciona ícone de estrela
 ---
 
-Your content here...
+O teu conteúdo aqui...
 ```
 
-**Important:** The `slug` field determines the URL. A post with `slug: "on-reading"` will be available at `/on-reading/`.
+**Importante:** O campo `slug` determina o URL. Uma publicação com `slug: "sobre-leitura"` estará disponível em `/sobre-leitura/`.
 
-## Post Types
+## Tipos de Publicação
 
-### 1. Regular Post (default)
+### 1. Publicação Regular (padrão)
 
-Standard blog post with title and content.
+Publicação de blogue padrão com título e conteúdo.
 
 ```yaml
 ---
-slug: "my-thoughts"
-title: "My Thoughts on X"
+slug: "os-meus-pensamentos"
+title: "Os Meus Pensamentos sobre X"
 date: 2024-02-25
-tags: ["thoughts"]
-favorite: true  # Optional
+tags: ["pensamentos"]
+favorite: true  # Opcional
 ---
 ```
 
-### 2. Quote Post
+### 2. Citação
 
-For sharing quotes without a title. Displays with green left border and italic text.
+Para partilhar citações sem título. Aparece com borda verde à esquerda e texto em itálico.
 
 ```yaml
 ---
-slug: "sagan-quote"
-title: "Carl Sagan on Reading"  # Used for archive/search
+slug: "citacao-sagan"
+title: "Carl Sagan sobre a Leitura"  # Usado para arquivo/pesquisa
 date: 2024-01-20
-tags: ["quotes"]
+tags: ["citacoes"]
 post_type: "quote"
-attribution: "Carl Sagan"  # Optional: displayed separately with different styling
+attribution: "Carl Sagan"  # Opcional: apresentado separadamente com estilo diferente
 ---
 
-The quote text here...
+O texto da citação aqui...
 ```
 
-### 3. Link Post
+### 3. Ligação
 
-For sharing external links with commentary. Title links to external URL with arrow.
+Para partilhar ligações externas com comentário. O título liga ao URL externo com seta.
 
 ```yaml
 ---
-slug: "interesting-article"
+slug: "artigo-interessante"
 title: "The Web's Grain"
 date: 2024-01-25
-tags: ["links", "web"]
+tags: ["ligacoes", "web"]
 post_type: "link"
-link_url: "https://example.com/article"
-favorite: true  # Optional
+link_url: "https://exemplo.com/artigo"
+favorite: true  # Opcional
 ---
 
-Your commentary on the linked article...
+O teu comentário sobre o artigo ligado...
 ```
 
-### 4. Photo Post
+### 4. Foto
 
-For sharing photos with captions.
+Para partilhar fotos com legendas.
 
 ```yaml
 ---
-slug: "morning-light"
-title: "Morning Light"
+slug: "luz-matinal"
+title: "Luz Matinal"
 date: 2024-02-01
-tags: ["photos", "nature"]
+tags: ["fotos", "natureza"]
 post_type: "photo"
-photo_url: "/images/morning-light.jpg"
+photo_url: "/img/luz-matinal.jpg"
 ---
 
-Caption and description...
+Legenda e descrição...
 ```
 
-### 5. Album Review
+### 5. Crítica de Álbum
 
-For music album reviews with ratings. Cover image appears on the right with a caption.
+Para críticas de álbuns de música com classificações. A capa aparece à direita com legenda.
 
 ```yaml
 ---
-slug: "ok-computer-review"
+slug: "critica-ok-computer"
 title: "OK Computer"
 date: 2024-02-10
-tags: ["music", "reviews"]
+tags: ["musica", "criticas"]
 post_type: "album"
 artist: "Radiohead"
 album: "OK Computer"
 year: 1997
 rating: "A+"
-cover_url: "/images/ok-computer.jpg"  # Optional
-cover_caption: "Custom caption here"  # Optional - defaults to "Album (Year)"
-favorite: true  # Optional
+cover_url: "/img/ok-computer.jpg"  # Opcional
+cover_caption: "Legenda personalizada aqui"  # Opcional - padrão é "Álbum (Ano)"
+favorite: true  # Opcional
 ---
 
-Your review...
+A tua crítica...
 ```
 
-### 6. Movie Review
+### 6. Crítica de Filme
 
-For film reviews with ratings. Poster appears on the right with a caption.
+Para críticas de filmes com classificações. O cartaz aparece à direita com legenda.
 
 ```yaml
 ---
-slug: "parasite-review"
+slug: "critica-parasite"
 title: "Parasite"
 date: 2024-02-15
-tags: ["film", "reviews"]
+tags: ["cinema", "criticas"]
 post_type: "movie"
 year: 2019
 rating: "A"
-poster_url: "/images/parasite.jpg"  # Optional
-cover_caption: "Custom caption here"  # Optional - defaults to "Title (Year)"
-favorite: true  # Optional
+poster_url: "/img/parasite.jpg"  # Opcional
+cover_caption: "Legenda personalizada aqui"  # Opcional - padrão é "Título (Ano)"
+favorite: true  # Opcional
 ---
 
-Your review...
+A tua crítica...
 ```
 
-### 7. Book Review
+### 7. Crítica de Livro
 
-For book reviews with ratings. Cover appears on the right with a caption.
+Para críticas de livros com classificações. A capa aparece à direita com legenda.
 
 ```yaml
 ---
-slug: "slaughterhouse-five-review"
-title: "Slaughterhouse-Five"
+slug: "critica-matadouro-cinco"
+title: "Matadouro Cinco"
 date: 2024-02-20
-tags: ["books", "reviews"]
+tags: ["livros", "criticas"]
 post_type: "book"
 author: "Kurt Vonnegut"
 year: 1969
 rating: "A+"
-cover_url: "/images/slaughterhouse-five.jpg"  # Optional
-cover_caption: "Custom caption here"  # Optional - defaults to "Author, Year"
-favorite: true  # Optional
+cover_url: "/img/matadouro-cinco.jpg"  # Opcional
+cover_caption: "Legenda personalizada aqui"  # Opcional - padrão é "Autor, Ano"
+favorite: true  # Opcional
 ---
 
-Your review...
+A tua crítica...
 ```
 
-## Rating System
+## Sistema de Classificação
 
-Reviews use letter grades: **A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, F**
+As críticas usam notas em letras: **A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, F**
 
-Ratings appear as color-coded badges next to the title:
-- **A+, A**: Green (excellent)
-- **A-, B+**: Light green (very good)
-- **B, B-**: Olive (good)
-- **C+, C, C-**: Gray (average)
-- **D+, D, D-**: Tan (below average)
-- **F**: Dusty rose (poor)
+As classificações aparecem como emblemas coloridos junto ao título:
+- **A+, A**: Verde (excelente)
+- **A-, B+**: Verde claro (muito bom)
+- **B, B-**: Oliveira (bom)
+- **C+, C, C-**: Cinzento (médio)
+- **D+, D, D-**: Bege (abaixo da média)
+- **F**: Rosa acastanhado (fraco)
 
-## Favorites
+## Favoritos
 
-Add `favorite: true` to any post's frontmatter to mark it as a favorite. A star icon will appear next to the title, and the post will be listed in the Favorites section of the Archive page.
+Adiciona `favorite: true` ao frontmatter de qualquer publicação para a marcar como favorita. Um ícone de estrela aparecerá junto ao título, e a publicação será listada na secção Favoritos da página Arquivo.
 
-## Images
+## Imagens
 
-Place images in `static/images/`. Reference them in frontmatter as `/images/filename.jpg`.
+Coloca imagens em `static/img/`. Referencia-as no frontmatter como `/img/nome-ficheiro.jpg`.
 
-## Site Structure
+## Estrutura do Site
 
-- **Home** (`/`): Latest 10 posts with pagination
-- **Archive** (`/archive/`): All posts organized by Favorites, Tags, post type (Movies, Albums, Books), and chronologically
-- **Gallery** (`/gallery/`): Grid of all photo posts
-- **Search** (`/search/`): Client-side search powered by Pagefind
-- **About** (`/about/`): About page
-- **Colophon** (`/colophon/`): Site credits and technical details
-- **Tags** (`/tags/tagname/`): Posts filtered by tag, grouped by year
+- **Início** (`/`): Últimas 10 publicações com paginação
+- **Arquivo** (`/archive/`): Todas as publicações organizadas por Favoritos, Tags, tipo de publicação (Filmes, Álbuns, Livros) e cronologicamente
+- **Galeria** (`/gallery/`): Grelha de todas as publicações de foto
+- **Pesquisa** (`/search/`): Pesquisa do lado do cliente com Pagefind
+- **Sobre** (`/about/`): Página sobre
+- **Colofão** (`/colophon/`): Créditos do site e detalhes técnicos
+- **Tags** (`/tags/nome-tag/`): Publicações filtradas por tag, agrupadas por ano
 
-## Features
+## Funcionalidades
 
-- **Clean URLs**: Posts are accessible at `/:slug/` (e.g., `/on-reading/`)
-- **Dark mode**: Automatically follows system preference
-- **Similar posts**: Shows related posts based on shared tags
-- **Backlinks**: Shows which posts link to the current post
-- **RSS feed**: Available at `/index.xml`
-- **Responsive design**: Optimized for mobile and desktop
+- **URLs limpos**: Publicações acessíveis em `/:slug/` (ex: `/sobre-leitura/`)
+- **Modo escuro**: Segue automaticamente a preferência do sistema
+- **Publicações similares**: Mostra publicações relacionadas baseadas em tags partilhadas
+- **Ligações**: Mostra que publicações ligam à publicação atual
+- **Feed RSS**: Disponível em `/index.xml`
+- **Design responsivo**: Otimizado para mobile e desktop
 
-## Theme Customization
+## Personalização do Tema
 
-The theme files are in `themes/deteritus/`:
+Os ficheiros do tema estão em `themes/deteritus/`:
 
-- `layouts/`: HTML templates
-- `static/css/style.css`: All styles with CSS custom properties
-- `static/fonts/`: Iowan Old Style font files
+- `layouts/`: Templates HTML
+- `static/css/style.css`: Todos os estilos com propriedades CSS personalizadas
+- `static/fonts/`: Ficheiros de fonte Iowan Old Style
 
-### CSS Variables
+### Variáveis CSS
 
-Edit colors in `static/css/style.css`:
+Edita cores em `static/css/style.css`:
 
 ```css
 :root {
-  --bg: #fffff8;      /* Background */
-  --text: #111;       /* Text color */
-  --muted: #666;      /* Secondary text */
-  --link: #2a7a4b;    /* Link color (forest green) */
-  --border: #ddd;     /* Border color */
+  --bg: #fffff8;      /* Fundo */
+  --text: #111;       /* Cor do texto */
+  --muted: #666;      /* Texto secundário */
+  --link: #2a7a4b;    /* Cor das ligações (verde floresta) */
+  --border: #ddd;     /* Cor das bordas */
 }
 ```
 
-## Rebuilding Search Index
+## Reconstruir Índice de Pesquisa
 
-After adding new posts locally, rebuild the Pagefind index:
+Após adicionar novas publicações localmente, reconstrói o índice Pagefind:
 
 ```bash
 hugo && npx pagefind --site public
@@ -252,91 +252,91 @@ hugo && npx pagefind --site public
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages when you push to the `main` branch.
+O site é automaticamente publicado no GitHub Pages quando fazes push para o branch `main`.
 
-### Initial Setup
+### Configuração Inicial
 
-1. **Create GitHub repository** (if not already done):
+1. **Criar repositório GitHub** (se ainda não feito):
    ```bash
    git init
    git add .
-   git commit -m "Initial commit"
+   git commit -m "Commit inicial"
    git remote add origin git@github.com:tiagojct/deteritus.com.git
    git push -u origin main
    ```
 
-2. **Enable GitHub Pages**:
-   - Go to repository Settings → Pages
-   - Under "Build and deployment", select **GitHub Actions**
+2. **Ativar GitHub Pages**:
+   - Vai a Definições do repositório → Pages
+   - Em "Build and deployment", seleciona **GitHub Actions**
 
-3. **Configure custom domain** (optional):
-   - In Settings → Pages, add your custom domain
-   - Configure DNS with your domain provider:
-     - For apex domain (deteritus.com): Add A records pointing to GitHub's IPs
-     - For www subdomain: Add CNAME record pointing to `tiagojct.github.io`
+3. **Configurar domínio personalizado** (opcional):
+   - Em Definições → Pages, adiciona o teu domínio personalizado
+   - Configura DNS com o teu fornecedor de domínio:
+     - Para domínio apex (deteritus.com): Adiciona registos A apontando para os IPs do GitHub
+     - Para subdomínio www: Adiciona registo CNAME apontando para `tiagojct.github.io`
 
-### Manual Deployment
+### Deployment Manual
 
-To deploy manually:
+Para publicar manualmente:
 ```bash
 git add .
-git commit -m "Your commit message"
+git commit -m "A tua mensagem de commit"
 git push
 ```
 
-The GitHub Action will automatically build Hugo, generate the search index, and deploy.
+O GitHub Action irá automaticamente compilar o Hugo, gerar o índice de pesquisa e publicar.
 
-## Creating Posts
+## Criar Publicações
 
-Use the `newpost` script to create posts from archetypes:
-
-```bash
-./newpost <type> <slug>
-```
-
-### Available Types
-
-| Type | Use For |
-|------|---------|
-| `post` | Regular blog posts |
-| `quote` | Quote posts with attribution |
-| `link` | External link posts |
-| `photo` | Photo posts |
-| `album` | Music album reviews |
-| `movie` | Film reviews |
-| `book` | Book reviews |
-
-### Examples
+Usa o script `newpost` para criar publicações a partir de archetypes:
 
 ```bash
-./newpost post my-thoughts
-./newpost quote sagan-on-books
-./newpost link interesting-article
-./newpost album ok-computer-review
-./newpost movie parasite-review
-./newpost book slaughterhouse-five
+./newpost <tipo> <slug>
 ```
 
-This creates a file like `content/blog/2024-01-15_my-thoughts.md` with the appropriate frontmatter template.
+### Tipos Disponíveis
 
-## Frontmatter Reference
+| Tipo | Utilização |
+|------|------------|
+| `post` | Publicações de blogue regulares |
+| `quote` | Publicações de citação com atribuição |
+| `link` | Publicações de ligação externa |
+| `photo` | Publicações de foto |
+| `album` | Críticas de álbuns de música |
+| `movie` | Críticas de filmes |
+| `book` | Críticas de livros |
 
-| Field | Type | Used By | Description |
-|-------|------|---------|-------------|
-| `slug` | string | All | URL path (required) |
-| `title` | string | All | Post title |
-| `date` | date | All | Publication date |
-| `tags` | array | All | List of tags |
-| `post_type` | string | All | post, quote, link, photo, album, movie, book |
-| `favorite` | bool | All | Shows star icon |
-| `attribution` | string | quote | Quote attribution (author, source) |
-| `link_url` | string | link | External URL |
-| `photo_url` | string | photo | Image path |
-| `artist` | string | album | Artist name |
-| `album` | string | album | Album title |
-| `author` | string | book | Author name |
-| `year` | int | album, movie, book | Release year |
-| `rating` | string | album, movie, book | Letter grade (A+ to F) |
-| `cover_url` | string | album, book | Cover image path |
-| `poster_url` | string | movie | Poster image path |
-| `cover_caption` | string | album, movie, book | Custom caption for cover/poster image |
+### Exemplos
+
+```bash
+./newpost post os-meus-pensamentos
+./newpost quote sagan-sobre-livros
+./newpost link artigo-interessante
+./newpost album critica-ok-computer
+./newpost movie critica-parasite
+./newpost book matadouro-cinco
+```
+
+Isto cria um ficheiro como `content/blog/2024-01-15_os-meus-pensamentos.md` com o template de frontmatter apropriado.
+
+## Referência de Frontmatter
+
+| Campo | Tipo | Usado Por | Descrição |
+|-------|------|-----------|-----------|
+| `slug` | string | Todos | Caminho URL (obrigatório) |
+| `title` | string | Todos | Título da publicação |
+| `date` | date | Todos | Data de publicação |
+| `tags` | array | Todos | Lista de tags |
+| `post_type` | string | Todos | post, quote, link, photo, album, movie, book |
+| `favorite` | bool | Todos | Mostra ícone de estrela |
+| `attribution` | string | quote | Atribuição da citação (autor, fonte) |
+| `link_url` | string | link | URL externo |
+| `photo_url` | string | photo | Caminho da imagem |
+| `artist` | string | album | Nome do artista |
+| `album` | string | album | Título do álbum |
+| `author` | string | book | Nome do autor |
+| `year` | int | album, movie, book | Ano de lançamento |
+| `rating` | string | album, movie, book | Nota em letra (A+ a F) |
+| `cover_url` | string | album, book | Caminho da imagem de capa |
+| `poster_url` | string | movie | Caminho da imagem do cartaz |
+| `cover_caption` | string | album, movie, book | Legenda personalizada para imagem de capa/cartaz |
