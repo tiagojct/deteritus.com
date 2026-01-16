@@ -1,29 +1,29 @@
 ---
-title: "Colofão"
+title: "Colophon"
 ---
 
-## Sobre Este Site
+## About This Site
 
-**Deteritus** é construído com [Hugo](https://gohugo.io), um gerador de sites estáticos rápido e flexível. O site utiliza um tema personalizado com foco na tipografia e legibilidade.
+**Deteritus** is built with [Hugo](https://gohugo.io), a fast and flexible static site generator. The site uses a custom theme focused on typography and readability.
 
-## Tipografia
+## Typography
 
-O tipo de letra principal é Iowan Old Style, uma fonte serifada moderna desenhada por John Downer. Inspira-se nos tipos de letra clássicos old-style, mantendo-se altamente legível em ecrãs. O código está em SF Mono.
+The main typeface is Iowan Old Style, a modern serif font designed by John Downer. It takes inspiration from classic old-style typefaces while remaining highly readable on screens. Code is set in SF Mono.
 
-## Princípios de Design
+## Design Principles
 
-- **Minimalismo**: Foco no conteúdo, não na decoração
-- **Legibilidade**: Altura de linha generosa, medida confortável
-- **Desempenho**: Sem frameworks JavaScript, dependências mínimas
-- **Acessibilidade**: HTML semântico, contraste de cores suficiente, respeita as preferências do sistema
+- **Minimalism**: Focus on content, not decoration
+- **Readability**: Generous line height, comfortable measure
+- **Performance**: No JavaScript frameworks, minimal dependencies
+- **Accessibility**: Semantic HTML, sufficient color contrast, respects system preferences
 
-## Funcionalidades
+## Features
 
-- Suporte para modo escuro (segue a preferência do sistema)
-- Pesquisa de texto completo com [Pagefind](https://pagefind.app)
-- Feed RSS para subscrição fácil
-- Múltiplos tipos de publicação: artigos, citações, ligações, fotos e críticas
+- Dark mode support (follows system preference)
+- Full-text search with [Pagefind](https://pagefind.app)
+- RSS feed for easy subscription
+- Multiple post types: articles, quotes, links, photos, and reviews
 
-## Alojamento
+## Hosting
 
-O site está alojado no GitHub Pages. O código fonte é gerido com Git.
+The site is hosted on GitHub Pages. Source code is managed with Git.

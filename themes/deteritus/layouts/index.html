@@ -8,7 +8,7 @@
   {{ with .Site.Params.intro }}
   <p>{{ . }}</p>
   {{ else }}
-  <p>Um blogue pessoal sobre tecnologia, música, livros, filmes e tudo o que me chame a atenção.</p>
+  <p>A personal blog about technology, music, books, films, and everything that catches my attention.</p>
   {{ end }}
 </div>
 {{- end -}}
@@ -22,10 +22,10 @@
 {{- if or ($paginator.HasPrev) ($paginator.HasNext) -}}
 <nav class="pagination">
   {{- if $paginator.HasPrev -}}
-  <a href="{{ $paginator.Prev.URL }}">&larr; Mais recentes</a>
+  <a href="{{ $paginator.Prev.URL }}">&larr; Newer</a>
   {{- end -}}
   {{- if $paginator.HasNext -}}
-  <a href="{{ $paginator.Next.URL }}">Mais antigos &rarr;</a>
+  <a href="{{ $paginator.Next.URL }}">Older &rarr;</a>
   {{- end -}}
 </nav>
 {{- end -}}

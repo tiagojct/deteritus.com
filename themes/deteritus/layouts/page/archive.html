@@ -6,12 +6,12 @@
 </header>
 
 <div class="archive-intro">
-  <p>Tudo o que escrevi, organizado para fácil navegação. Utiliza a pesquisa abaixo para encontrar algo específico, ou explora por secção.</p>
+  <p>Everything I've written, organized for easy navigation. Use the search below to find something specific, or explore by section.</p>
 </div>
 
 {{/* Search Section */}}
 <section class="archive-section">
-  <h2>Pesquisa</h2>
+  <h2>Search</h2>
   <div class="search-container">
     <div id="search"></div>
   </div>
@@ -21,7 +21,7 @@
 {{- $photos := where $blogPosts ".Params.post_type" "photo" -}}
 {{- if $photos -}}
 <section class="archive-section">
-  <h2>Galeria</h2>
+  <h2>Gallery</h2>
   <div class="gallery-preview">
     {{- range first 3 $photos.ByDate.Reverse -}}
     <a href="{{ .RelPermalink }}" class="gallery-preview-item">
@@ -29,7 +29,7 @@
     </a>
     {{- end -}}
   </div>
-  <p class="gallery-link"><a href="/gallery/">Ver todas as fotos →</a></p>
+  <p class="gallery-link"><a href="/gallery/">View all photos →</a></p>
 </section>
 {{- end -}}
 
@@ -37,7 +37,7 @@
 {{- $favorites := where $blogPosts ".Params.favorite" true -}}
 {{- if $favorites -}}
 <section class="archive-section">
-  <h2>Favoritos</h2>
+  <h2>Favorites</h2>
   <ul class="archive-list">
     {{- range $favorites.ByDate.Reverse -}}
     <li>
@@ -71,7 +71,7 @@
 {{- $movies := where $blogPosts ".Params.post_type" "movie" -}}
 {{- if $movies -}}
 <section class="archive-section">
-  <h2>Filmes</h2>
+  <h2>Movies</h2>
   {{- $moviePages := $movies.ByDate.Reverse -}}
   {{- $years := slice -}}
   {{- range $moviePages -}}
@@ -101,7 +101,7 @@
 {{- $albums := where $blogPosts ".Params.post_type" "album" -}}
 {{- if $albums -}}
 <section class="archive-section">
-  <h2>Álbuns</h2>
+  <h2>Albums</h2>
   {{- $albumPages := $albums.ByDate.Reverse -}}
   {{- $years := slice -}}
   {{- range $albumPages -}}
@@ -131,7 +131,7 @@
 {{- $books := where $blogPosts ".Params.post_type" "book" -}}
 {{- if $books -}}
 <section class="archive-section">
-  <h2>Livros</h2>
+  <h2>Books</h2>
   {{- $bookPages := $books.ByDate.Reverse -}}
   {{- $years := slice -}}
   {{- range $bookPages -}}
@@ -159,7 +159,7 @@
 
 {{/* All Posts by Year */}}
 <section class="archive-section">
-  <h2>Todas as Publicações</h2>
+  <h2>All Posts</h2>
   {{- $pages := $blogPosts.ByDate.Reverse -}}
   {{- $years := slice -}}
   {{- range $pages -}}
