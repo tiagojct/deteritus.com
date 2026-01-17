@@ -1,6 +1,6 @@
 ---
 slug: "sepultura-barcelona"
-title: ""
+title: "Sepultura, Beneath the Remains, Barcelona 91"
 date: 2026-01-17
 tags: ["sepultura", "music", "concert", "metal",]
 favorite: false
